@@ -1,0 +1,17 @@
+### POST request to example server
+POST http://localhost:3005/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+### POST
+POST http://localhost:3005/login
+Content-Type: application/json
+
+{
+  "username": "coucou",
+  "password": "un essai"
+}
