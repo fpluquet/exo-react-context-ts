@@ -5,7 +5,7 @@ export default function LoginButton() {
     const {user, login, logout, connecting} = useLoginContext()
     return (
         <div>
-            {user.isLoggedIn() ? (
+            {user.isLoggedIn ? (
                 <button onClick={logout}>Déconnexion</button>
             ) : (
                 <button onClick={connecting ? () => {} : login} disabled={connecting} >

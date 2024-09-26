@@ -13,5 +13,5 @@ export interface LoginContextMethods {
     logout: () => void
 }
 
-// question : que veut dire le caractère & dans la ligne suivante ?
+// question : que veut dire le caractère & dans la ligne suivante ? (conseil : suivez l'utilisation des types)
 export type LoginContextType = LoginContextState & LoginContextMethods

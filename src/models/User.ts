@@ -6,7 +6,7 @@ export class User {
         this._name = name
     }
 
-    isLoggedIn() {
+    get isLoggedIn() {
         return true
     }
 
@@ -27,7 +27,7 @@ export class AnonymousUser extends User {
         super('Anonymous')
     }
 
-    isLoggedIn() {
+    get isLoggedIn() {
         return false
     }
 }
