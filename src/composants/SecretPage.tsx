@@ -16,7 +16,7 @@ export function SecretPage() {
                 <li>Il aime les chats</li>
                 <li>Il a fait de la chirurgie esthétique</li>
                 <li>Il a un tatouage de Pikachu</li>
-                <li>Il n'a pas d'imagination et utiliser copilot pour générer des secrets</li>
+                <li>Il n'a pas d'imagination et il utilise copilot pour générer des secrets</li>
             </ul>
         </div>
     )
