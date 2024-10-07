@@ -1,14 +1,16 @@
 import {useLoginContext} from "../contexts/LoginContextProvider.tsx";
+import {useNavigate} from "react-router-dom";
 
-
-export default function LoginButton({onClick}: {onClick: () => void}) {
+export default function LoginButton() {
     const {user, logout, connecting} = useLoginContext()
+    const navigate = useNavigate()
+    const goToLogin = () => navigate('/login')
     return (
         <div>
             {user.isLoggedIn ? (
                 <button onClick={logout}>Déconnexion</button>
             ) : (
-                <button onClick={connecting ? () => {} : onClick} disabled={connecting} >
+                <button onClick={goToLogin} disabled={connecting} >
                     {connecting ? 'Connexion en cours...' : 'Connexion'}
                 </button>
             )}

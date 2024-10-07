@@ -1,4 +1,3 @@
-import LoginButton from "./LoginButton.tsx";
 import {useState} from "react";
 import {useLoginContext} from "../contexts/LoginContextProvider.tsx";
 import "./LoginForm.css"
@@ -19,6 +18,8 @@ export function LoginForm() {
         <input type="text" placeholder="Nom d'utilisateur" value={username} onChange={e => setUsername(e.target.value)} />
         <label htmlFor="password">Mot de passe</label>
         <input type="password" placeholder="Mot de passe" value={password} onChange={e => setPassword(e.target.value)} />
-        <LoginButton onClick={tryConnect} />
+        <button onClick={tryConnect} disabled={loginContext.connecting}>
+            {loginContext.connecting ? 'Connexion en cours...' : 'Connexion'}
+        </button>
     </form>
 }

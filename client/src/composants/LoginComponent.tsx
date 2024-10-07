@@ -1,4 +1,6 @@
 import {useLoginContext} from "../contexts/LoginContextProvider.tsx";
+import {LoginForm} from "./LoginForm.tsx";
+import {Navigate} from "react-router-dom";
 
 
 export default function LoginComponent() {
@@ -6,11 +8,11 @@ export default function LoginComponent() {
 
     return loginContext.user.isLoggedIn ? (
             <div>
-                <h1>Bienvenue, {loginContext.user.name}</h1>
+                <Navigate to={"/"}/>
             </div>
         ) : (
             <div>
-                <h1>Merci de vous connecter</h1>
+                <LoginForm />
         </div>
     )
 

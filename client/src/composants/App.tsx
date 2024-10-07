@@ -1,26 +1,22 @@
 import './App.css'
-import WithoutConnection from "./WithoutConnection.tsx";
 import LoginContextProvider from "../contexts/LoginContextProvider.tsx";
-import LoginComponent from "./LoginComponent.tsx";
-import {SecretPage} from "./SecretPage.tsx";
-import {IfConnectedComponent} from "./IfConnectedComponent.tsx";
-import {LoginForm} from "./LoginForm.tsx";
+import {Router} from "../router/Router.tsx";
+import LoginButton from "./LoginButton.tsx";
 
 function App() {
     return (
         <>
             <LoginContextProvider>
-                <IfConnectedComponent>
-                    <WithoutConnection></WithoutConnection>
-                </IfConnectedComponent>
-                <LoginComponent></LoginComponent>
-                <LoginForm></LoginForm>
-                <IfConnectedComponent>
-                    <SecretPage></SecretPage>
-                </IfConnectedComponent>
+                <div className="navbar">
+                    <h3>Secret HELHa</h3>
+                    <LoginButton></LoginButton>
+                </div>
+                <div className="body">
+                    <Router/>
+                </div>
             </LoginContextProvider>
         </>
-    )
+)
 }
 
 export default App

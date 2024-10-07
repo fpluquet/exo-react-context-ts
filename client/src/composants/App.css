@@ -1,5 +1,20 @@
 #root {
-  max-width: 1280px;
-  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #535bf2;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
